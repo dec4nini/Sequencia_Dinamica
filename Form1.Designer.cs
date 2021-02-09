@@ -41,6 +41,7 @@ namespace Sequencia__Maior_Menor
             this.btnLimpar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblPosi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtQtde
@@ -200,12 +201,25 @@ namespace Sequencia__Maior_Menor
             this.label4.TabIndex = 12;
             this.label4.Text = "Maior valor:";
             // 
+            // lblPosi
+            // 
+            this.lblPosi.AutoSize = true;
+            this.lblPosi.BackColor = System.Drawing.Color.Transparent;
+            this.lblPosi.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosi.ForeColor = System.Drawing.Color.White;
+            this.lblPosi.Location = new System.Drawing.Point(70, 129);
+            this.lblPosi.Name = "lblPosi";
+            this.lblPosi.Size = new System.Drawing.Size(33, 16);
+            this.lblPosi.TabIndex = 14;
+            this.lblPosi.Text = "(0/0)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(370, 291);
+            this.Controls.Add(this.lblPosi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLimpar);
@@ -241,6 +255,7 @@ namespace Sequencia__Maior_Menor
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPosi;
     }
 }
 

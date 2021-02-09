@@ -33,12 +33,12 @@ namespace Sequencia__Maior_Menor
                 
                 if (qtd_nums<0)
                 {
-                    MessageBox.Show("Por favor insira valores válidos!");
+                    MessageBox.Show("Por favor insira valores válidos!");                    
                 }
                 else
                 {
                     btnQtd.Visible = false;
-
+                    lblPosi.Text = ("(" + cont + "/" + qtd_nums + ")");
                     #region Habilitar botões                    
                     btnInserir.Visible = true;
                     btnLimpar.Visible = true;
@@ -72,9 +72,11 @@ namespace Sequencia__Maior_Menor
                 cont++;
                 txtValor.Focus();
                 txtValor.Text = "";
+                lblPosi.Text = ("(" + cont + "/" + qtd_nums + ")");
             }
             else if(ok)
             {
+                lblPosi.Text = ("(" + cont + "/" + qtd_nums + ")");
                 lblMaior.Text = lista[0].ToString();
                 lblMenor.Text = lista[0].ToString();
                 lista.Add(Convert.ToInt32(txtValor.Text));
@@ -95,6 +97,7 @@ namespace Sequencia__Maior_Menor
                     lblSeq.Text += " " + Convert.ToString(i);
                 }
                 btnInserir.Visible = false;
+                lblPosi.Text = ("(" + cont + "/" + qtd_nums + ")");
             }
             
         }
@@ -112,6 +115,7 @@ namespace Sequencia__Maior_Menor
             btnQtd.Visible = true;
             lista.Clear();
             cont = 0;
+            lblPosi.Text = "(0/0)";
         }
     }
 }
