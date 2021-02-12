@@ -42,15 +42,21 @@ namespace Sequencia__Maior_Menor
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblPosi = new System.Windows.Forms.Label();
+            this.cbx2Maior = new System.Windows.Forms.CheckBox();
+            this.cbx2Menor = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl2Menor = new System.Windows.Forms.Label();
+            this.lbl2Maior = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtQtde
             // 
-            this.txtQtde.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtQtde.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtQtde.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQtde.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQtde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtde.ForeColor = System.Drawing.Color.White;
+            this.txtQtde.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtQtde.Location = new System.Drawing.Point(21, 36);
             this.txtQtde.Name = "txtQtde";
             this.txtQtde.Size = new System.Drawing.Size(117, 20);
@@ -89,7 +95,7 @@ namespace Sequencia__Maior_Menor
             this.lblSeq.BackColor = System.Drawing.Color.Transparent;
             this.lblSeq.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeq.ForeColor = System.Drawing.Color.White;
-            this.lblSeq.Location = new System.Drawing.Point(151, 86);
+            this.lblSeq.Location = new System.Drawing.Point(151, 149);
             this.lblSeq.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblSeq.Name = "lblSeq";
             this.lblSeq.Size = new System.Drawing.Size(99, 17);
@@ -128,7 +134,7 @@ namespace Sequencia__Maior_Menor
             this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnInserir.Location = new System.Drawing.Point(79, 175);
+            this.btnInserir.Location = new System.Drawing.Point(21, 175);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(59, 31);
             this.btnInserir.TabIndex = 10;
@@ -151,10 +157,10 @@ namespace Sequencia__Maior_Menor
             // 
             // txtValor
             // 
-            this.txtValor.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtValor.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtValor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.ForeColor = System.Drawing.Color.White;
+            this.txtValor.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtValor.Location = new System.Drawing.Point(21, 149);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(117, 20);
@@ -166,7 +172,7 @@ namespace Sequencia__Maior_Menor
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLimpar.Location = new System.Drawing.Point(79, 243);
+            this.btnLimpar.Location = new System.Drawing.Point(79, 175);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(59, 31);
             this.btnLimpar.TabIndex = 11;
@@ -213,12 +219,94 @@ namespace Sequencia__Maior_Menor
             this.lblPosi.TabIndex = 14;
             this.lblPosi.Text = "(0/0)";
             // 
+            // cbx2Maior
+            // 
+            this.cbx2Maior.AutoSize = true;
+            this.cbx2Maior.Location = new System.Drawing.Point(21, 212);
+            this.cbx2Maior.Name = "cbx2Maior";
+            this.cbx2Maior.Size = new System.Drawing.Size(123, 17);
+            this.cbx2Maior.TabIndex = 15;
+            this.cbx2Maior.Text = "Segundo maior valor";
+            this.cbx2Maior.UseVisualStyleBackColor = true;
+            // 
+            // cbx2Menor
+            // 
+            this.cbx2Menor.AutoSize = true;
+            this.cbx2Menor.Location = new System.Drawing.Point(21, 235);
+            this.cbx2Menor.Name = "cbx2Menor";
+            this.cbx2Menor.Size = new System.Drawing.Size(127, 17);
+            this.cbx2Menor.TabIndex = 16;
+            this.cbx2Menor.Text = "Segundo menor valor";
+            this.cbx2Menor.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(151, 119);
+            this.label5.MaximumSize = new System.Drawing.Size(100, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 17);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "2º menor";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(151, 86);
+            this.label6.MaximumSize = new System.Drawing.Size(100, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "2º maior:";
+            this.label6.Visible = false;
+            // 
+            // lbl2Menor
+            // 
+            this.lbl2Menor.AutoSize = true;
+            this.lbl2Menor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2Menor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2Menor.ForeColor = System.Drawing.Color.White;
+            this.lbl2Menor.Location = new System.Drawing.Point(242, 119);
+            this.lbl2Menor.MaximumSize = new System.Drawing.Size(100, 0);
+            this.lbl2Menor.Name = "lbl2Menor";
+            this.lbl2Menor.Size = new System.Drawing.Size(15, 17);
+            this.lbl2Menor.TabIndex = 18;
+            this.lbl2Menor.Text = "0";
+            this.lbl2Menor.Visible = false;
+            // 
+            // lbl2Maior
+            // 
+            this.lbl2Maior.AutoSize = true;
+            this.lbl2Maior.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2Maior.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2Maior.ForeColor = System.Drawing.Color.White;
+            this.lbl2Maior.Location = new System.Drawing.Point(242, 86);
+            this.lbl2Maior.MaximumSize = new System.Drawing.Size(100, 0);
+            this.lbl2Maior.Name = "lbl2Maior";
+            this.lbl2Maior.Size = new System.Drawing.Size(15, 17);
+            this.lbl2Maior.TabIndex = 17;
+            this.lbl2Maior.Text = "0";
+            this.lbl2Maior.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(370, 291);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl2Menor);
+            this.Controls.Add(this.lbl2Maior);
+            this.Controls.Add(this.cbx2Menor);
+            this.Controls.Add(this.cbx2Maior);
             this.Controls.Add(this.lblPosi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -256,6 +344,12 @@ namespace Sequencia__Maior_Menor
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblPosi;
+        private System.Windows.Forms.CheckBox cbx2Maior;
+        private System.Windows.Forms.CheckBox cbx2Menor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl2Menor;
+        private System.Windows.Forms.Label lbl2Maior;
     }
 }
 

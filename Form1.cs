@@ -18,6 +18,10 @@ namespace Sequencia__Maior_Menor
         int qtd_nums;
         int cont = 0;
         int num;
+        int max;
+        int min;
+        int max2;
+        int min2;
 
 
         public Form1()
@@ -31,7 +35,7 @@ namespace Sequencia__Maior_Menor
             {
                 qtd_nums = Convert.ToInt32(txtQtde.Text);
                 
-                if (qtd_nums<0)
+                if (qtd_nums<2)
                 {
                     MessageBox.Show("Por favor insira valores válidos!");                    
                 }
@@ -54,6 +58,8 @@ namespace Sequencia__Maior_Menor
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+            cbx2Maior.Enabled = false;
+            cbx2Menor.Enabled = false;
             bool ok = true;
             try
             {
@@ -65,8 +71,12 @@ namespace Sequencia__Maior_Menor
                 ok = false;
             }
 
+            if (ok & lista.Contains(num))
+            {
+                MessageBox.Show(num+ " já existe na sequência, insira outro valor!");
+            }
             
-            if (cont<qtd_nums-1 & ok)
+            else if (cont<qtd_nums-1 & ok)
             {
                 lista.Add(num);
                 cont++;
@@ -77,27 +87,64 @@ namespace Sequencia__Maior_Menor
             else if(ok)
             {
                 lblPosi.Text = ("(" + cont + "/" + qtd_nums + ")");
-                lblMaior.Text = lista[0].ToString();
-                lblMenor.Text = lista[0].ToString();
+                max = lista[0];
+                min = lista[0];
                 lista.Add(Convert.ToInt32(txtValor.Text));
                 cont++;
-                foreach (var item in lista)
-                {
-                    if (item > Convert.ToInt32(lblMaior.Text))
-                    {
-                        lblMaior.Text = Convert.ToString(item);
-                    }
-                    else if (item < Convert.ToInt32(lblMenor.Text))
-                    {
-                        lblMenor.Text = Convert.ToString(item);
-                    }                    
-                }
+                //Imprimir sequência
                 foreach (var i in lista)
                 {
                     lblSeq.Text += " " + Convert.ToString(i);
                 }
                 btnInserir.Visible = false;
                 lblPosi.Text = ("(" + cont + "/" + qtd_nums + ")");
+
+                foreach (var item in lista)
+                {
+                    if (item > max)
+                    {
+                        max = item;                        
+                    }
+                    if (item < min)
+                    {
+                        min = item;                        
+                    }                    
+                }
+                
+                lblMaior.Text = max.ToString();
+                lblMenor.Text = min.ToString();
+                lista.Sort();
+                if (cbx2Maior.Checked)
+                {
+                    label6.Visible = true;
+                    lbl2Maior.Visible = true;
+                    foreach (var item in lista)
+                    {
+                        if (item < max & item > min)
+                        {
+                            max2 = item;
+                        }
+                    }
+                }
+                lista.Reverse();
+                if (cbx2Menor.Checked)
+                {
+                    label5.Visible = true;
+                    lbl2Menor.Visible = true;
+                    foreach (var item in lista)
+                    {
+                        if (item < max & item > min)
+                        {
+                            min2 = item;
+                        }
+                    }
+                }
+
+              
+                lbl2Maior.Text = max2.ToString();
+                lbl2Menor.Text = min2.ToString();
+
+                
             }
             
         }
@@ -116,6 +163,8 @@ namespace Sequencia__Maior_Menor
             lista.Clear();
             cont = 0;
             lblPosi.Text = "(0/0)";
+            cbx2Maior.Enabled = true;
+            cbx2Menor.Enabled = true;
         }
     }
 }
